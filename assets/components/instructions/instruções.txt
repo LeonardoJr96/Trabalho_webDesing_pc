@@ -1,3 +1,6 @@
-documentar tudo o que for fazer para poder apresentar
+Documentar tudo o que for fazer para poder apresentar
 
-teste
+*criar o CSS para as paginas
+*Formular as perguntas e respostas
+*Arrumar o JS
+*Fazer o index.html
