@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #00ffff;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#pergunta {
+    text-transform: capitalize;
+}
+
+#rest-opc {
+    border: 2px solid #eeee; /* Define a largura e a cor da borda */
+    background-color: white;
+    padding: 10px; /* Adiciona um espaçamento interno ao redor das perguntas */
+}
+

@@ -1,38 +1,93 @@
-import {question_2} from '../question.mjs'
+import { question_2 } from '../question.mjs';
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    let acertos = 0;
+    let erros = 0;
+    let currentQuestionIndex = 0;
+    let respostaClicada = false;
+
+    const result = document.getElementById('result')
     const selectResponse = document.getElementById('quiz');
-    const pergunta = document.getElementById('pergunta')
+    const pergunta = document.getElementById('pergunta');
+    const reset = document.getElementById('reset');
 
-    // Seleciona uma pergunta aleatória
-    const aleatoriaPerguntas = Math.floor(Math.random() * question_2.length)
-    const currentAnswers = question_2[aleatoriaPerguntas];
+    function nextQuestion() {
+        // Verifica se ainda há perguntas restantes
+        if (currentQuestionIndex < question_2.length - 1) {
+            currentQuestionIndex++;
+        } else {
+            alert('Você respondeu todas as perguntas!');
+            return;
+        }
 
-    shuffleAnswersOpcoes(currentAnswers.opcoes); //altera a resposta
-    pergunta.textContent = currentAnswers.question; //define a pergunta
+        // Seleciona a próxima pergunta e embaralha as opções de resposta
+        const currentAnswers = question_2[currentQuestionIndex];
+        shuffleAnswersOpcoes(currentAnswers.opcoes);
+        pergunta.textContent = currentAnswers.question;
 
-    selectResponse.innerHTML = `
-        <button id='button_1' onClick="responseAlternative(${currentAnswers.opcoes[0].correct})"><strong>${currentAnswers.opcoes[0].option}</strong></button>
-        <button id='button_2' onClick="responseAlternative(${currentAnswers.opcoes[1].correct})"><strong>${currentAnswers.opcoes[1].option}</strong></button>
-        <button id='button_3' onClick="responseAlternative(${currentAnswers.opcoes[2].correct})"><strong>${currentAnswers.opcoes[2].option}</strong></button>
-        <button id='button_4' onClick="responseAlternative(${currentAnswers.opcoes[3].correct})"><strong>${currentAnswers.opcoes[3].option}</strong></button>
-    `; // cria um elemento dinamico
+        result.innerHTML = `
+            <span>${acertos}/${question_2.length}
+        `
 
-    console.log('Botões:', button_1, button_2, button_3, button_4);
+        // Atualiza as opções de resposta na tela
+        selectResponse.innerHTML = `
+                <button id='button_1' onClick="responseAlternative(${currentAnswers.opcoes[0].correct})"><strong>${currentAnswers.opcoes[0].option}</strong></button>
+                <button id='button_2' onClick="responseAlternative(${currentAnswers.opcoes[1].correct})"><strong>${currentAnswers.opcoes[1].option}</strong></button>
+                <button id='button_3' onClick="responseAlternative(${currentAnswers.opcoes[2].correct})"><strong>${currentAnswers.opcoes[2].option}</strong></button>
+                <button id='button_4' onClick="responseAlternative(${currentAnswers.opcoes[3].correct})"><strong>${currentAnswers.opcoes[3].option}</strong></button>
+        `;
+
+        respostaClicada = false;
+
+        // Avança para a próxima pergunta após um pequeno atraso (por exemplo, 2 segundos)
+        setTimeout(() => {
+            if (!respostaClicada) {
+                nextQuestion();
+            }
+        }, 20000); // 20000 milissegundos = 20 segundos
+    }
 
     window.responseAlternative = (alternativa) => {
+        respostaClicada = true; // Define que uma resposta foi clicada
         if (alternativa) {
-            alert('resposta certa');
+            acertos++;
+            alert('Resposta correta!' + acertos);
         } else {
-            alert('resposta errada');
+            erros++;
+            alert('Resposta errada!' + erros);
         }
-    }// função para determinar se está certa ou errada
+
+        nextQuestion()
+    };
 
     function shuffleAnswersOpcoes(opcoes) {
         for (let i = opcoes.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [opcoes[i], opcoes[j]] = [opcoes[j], opcoes[i]];
         }
-    }; //função que embaralha os arrays answers
+    }
 
-}); 
+    function shuffleQuestions() {
+        for (let i = question_2.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [question_2[i], question_2[j]] = [question_2[j], question_2[i]];
+        }
+    }
+
+    reset.addEventListener('click', function () {
+        reiniciar();
+    });
+
+    function reiniciar() {
+        acertos = 0;
+        erros = 0;
+        currentQuestionIndex = 0;
+        shuffleQuestions(); // Embaralha as perguntas novamente
+        nextQuestion();
+    }
+
+    // Embaralha as perguntas inicialmente
+    shuffleQuestions();
+    // Inicia o quiz com a primeira pergunta
+    nextQuestion();
+});
