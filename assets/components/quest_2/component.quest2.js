@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectResponse = document.getElementById('quiz_2');
     const pergunta = document.getElementById('pergunta')
 
-    // Seleciona uma pergunta aleatória da lista de perguntas
+    // Seleciona uma pergunta aleatória
     const aleatoriaPerguntas = Math.floor(Math.random() * question_2.length)
     const currentAnswers = question_2[aleatoriaPerguntas];
 
-    shuffleAnswersOpcoes(currentAnswers.opcoes); //deixa aleatório a resposta
+    shuffleAnswersOpcoes(currentAnswers.opcoes); //altera a resposta
     pergunta.textContent = currentAnswers.question; //define a pergunta
 
     selectResponse.innerHTML = `
