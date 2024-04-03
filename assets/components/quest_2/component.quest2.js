@@ -1,7 +1,7 @@
 import {question_2} from '../question.mjs'
 
 document.addEventListener('DOMContentLoaded', function() {
-    const selectResponse = document.getElementById('quiz_2');
+    const selectResponse = document.getElementById('quiz');
     const pergunta = document.getElementById('pergunta')
 
     // Seleciona uma pergunta aleatória

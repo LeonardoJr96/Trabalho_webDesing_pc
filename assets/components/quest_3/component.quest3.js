@@ -1,7 +1,7 @@
 import {question_3} from '../question.mjs' //importa os objetos da constante "question 3" do arquivo "question.mjs"
 
 document.addEventListener('DOMContentLoaded', function() {
-    const selectResponse = document.getElementById('quiz_2');
+    const selectResponse = document.getElementById('quiz');
     const pergunta = document.getElementById('pergunta')
 
     // Seleciona uma pergunta aleatória
