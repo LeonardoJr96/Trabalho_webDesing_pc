@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #00ffff;   
+}
+
+.quiz_2 {
+    text-transform: capitalize;
+}
