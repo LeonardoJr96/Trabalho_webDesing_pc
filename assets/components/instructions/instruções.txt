@@ -1,6 +1,12 @@
 Documentar tudo o que for fazer para poder apresentar
 
+*Fazer o index.html
 *criar o CSS para as paginas
 *Formular as perguntas e respostas
-*Arrumar o JS
-*Fazer o index.html
+*Adicionar funcionalidades de voltar para o arquivo index.
+*adicionar seguintes funcionalidades:
+    .retornar na questão anterior
+    .colocar limitante nas questões
+    .colocar dificuldade
+    .criar um pop-up com os resultados(conter um gráfico de pizza comparado acertos e erros)
+    .colocar uma mensagem após o término

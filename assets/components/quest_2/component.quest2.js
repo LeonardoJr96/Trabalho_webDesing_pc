@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         respostaClicada = false;
 
-        // Avança para a próxima pergunta após um pequeno atraso (por exemplo, 2 segundos)
-       // setTimeout(() => {
-         //   if (!respostaClicada) {
-           //     nextQuestion();
-            //}
-        //}, 20000); // 20000 milissegundos = 20 segundos
+        // Avança para a próxima pergunta após um pequeno atraso (por exemplo, 20 segundos)
+       setTimeout(() => {
+           if (!respostaClicada) {
+             nextQuestion();
+            }
+        }, 20000); // 20000 milissegundos = 20 segundos
     }
 
     window.responseAlternative = (alternativa) => {
