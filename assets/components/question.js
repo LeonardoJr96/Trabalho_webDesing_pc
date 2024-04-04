@@ -72,9 +72,9 @@ const question_2 = [
         ]
     }, 
     {
-        question: "Quanto é 1 + 1",
+        question: "Quanto é 2 + 1",
         opcoes: [
-         { option: "2", correct: true },
+         { option: "3", correct: true },
          { option: "7", correct: false },
          { option: "5", correct: false },
          { option: "7", correct: false }
@@ -82,9 +82,9 @@ const question_2 = [
     },
 
     {
-        question: "Quanto é 1 + 1",
+        question: "Quanto é 3 + 1",
         opcoes: [
-         { option: "2", correct: true },
+         { option: "4", correct: true },
          { option: "7", correct: false },
          { option: "5", correct: false },
          { option: "7", correct: false }

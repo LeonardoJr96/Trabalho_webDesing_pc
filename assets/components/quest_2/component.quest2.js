@@ -1,6 +1,7 @@
-import { question_2 } from '../question.mjs';
+import { question_2 } from '../question.js';
 
 document.addEventListener('DOMContentLoaded', function () {
+    let contagem = 1;
     let acertos = 0;
     let erros = 0;
     let currentQuestionIndex = 0;
@@ -10,23 +11,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const selectResponse = document.getElementById('quiz');
     const pergunta = document.getElementById('pergunta');
     const reset = document.getElementById('reset');
+    const retorno = document.getElementById('retorno');
 
     function nextQuestion() {
         // Verifica se ainda há perguntas restantes
-        if (currentQuestionIndex < question_2.length - 1) {
+        if (currentQuestionIndex <= question_2.length - 1) {
             currentQuestionIndex++;
         } else {
-            alert('Você respondeu todas as perguntas!');
+            alert('acertou todas');
             return;
         }
 
         // Seleciona a próxima pergunta e embaralha as opções de resposta
-        const currentAnswers = question_2[currentQuestionIndex];
+        
+        const currentAnswers = question_2[currentQuestionIndex - 1];
+        console.log(currentAnswers)
         shuffleAnswersOpcoes(currentAnswers.opcoes);
         pergunta.textContent = currentAnswers.question;
 
         result.innerHTML = `
-            <span>${acertos}/${question_2.length}
+            <span>${contagem}/${question_2.length}
         `
 
         // Atualiza as opções de resposta na tela
@@ -40,22 +44,24 @@ document.addEventListener('DOMContentLoaded', function () {
         respostaClicada = false;
 
         // Avança para a próxima pergunta após um pequeno atraso (por exemplo, 2 segundos)
-        setTimeout(() => {
-            if (!respostaClicada) {
-                nextQuestion();
-            }
-        }, 20000); // 20000 milissegundos = 20 segundos
+       // setTimeout(() => {
+         //   if (!respostaClicada) {
+           //     nextQuestion();
+            //}
+        //}, 20000); // 20000 milissegundos = 20 segundos
     }
 
     window.responseAlternative = (alternativa) => {
         respostaClicada = true; // Define que uma resposta foi clicada
         if (alternativa) {
             acertos++;
-            alert('Resposta correta!' + acertos);
+            console.log(acertos)
         } else {
             erros++;
             alert('Resposta errada!' + erros);
+            console.log(erros)
         }
+        contagem++;
 
         nextQuestion()
     };
@@ -90,4 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
     shuffleQuestions();
     // Inicia o quiz com a primeira pergunta
     nextQuestion();
+
+    //retorno.addEventListener('click', function () {
+
+    //});
 });
