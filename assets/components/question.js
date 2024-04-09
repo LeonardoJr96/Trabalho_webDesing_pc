@@ -1,7 +1,7 @@
 //ficara as classses com as respostas
 const question_1 = [
     {
-        question: "quanto é 1 + 1",
+        question: "teste1 é 1 + 1",
         opcoes: [
         {option: "2", correct: true},
         {option: "1", correct: false},
@@ -10,7 +10,7 @@ const question_1 = [
         ]
     }, 
     {
-        question: "Quanto é 1 + 1",
+        question: "teste1 é 1 + 1",
         opcoes: [
          { option: "2", correct: true },
          { option: "7", correct: false },
@@ -20,7 +20,7 @@ const question_1 = [
     },
 
     {
-        question: "Quanto é 1 + 1",
+        question: "teste1 é 1 + 1",
         opcoes: [
          { option: "2", correct: true },
          { option: "7", correct: false },
@@ -30,7 +30,7 @@ const question_1 = [
     },
 
     {
-        question: "Quanto é 2 + 2",
+        question: "teste1 é 2 + 2",
         opcoes: [
          { option: "4", correct: true },
          { option: "7", correct: false },
@@ -40,7 +40,7 @@ const question_1 = [
     },
 
     {
-        question: "Quanto é 3 + 3",
+        question: "teste1 é 3 + 3",
         opcoes: [
          { option: "6", correct: true },
          { option: "7", correct: false },
@@ -50,7 +50,7 @@ const question_1 = [
     },
 
     {
-        question: "Quanto é 4 + 4",
+        question: "teste1 é 4 + 4",
         opcoes: [
          { option: "8 ", correct: true },
          { option: "7", correct: false },
@@ -63,7 +63,7 @@ const question_1 = [
 
 const question_2 = [
     {
-        question: "quanto é 1 + 1",
+        question: "teste2 é 1 + 1",
         opcoes: [
         {option: "2", correct: true},
         {option: "1", correct: false},
@@ -72,7 +72,7 @@ const question_2 = [
         ]
     }, 
     {
-        question: "Quanto é 2 + 1",
+        question: "teste2 é 2 + 1",
         opcoes: [
          { option: "3", correct: true },
          { option: "7", correct: false },
@@ -82,7 +82,7 @@ const question_2 = [
     },
 
     {
-        question: "Quanto é 3 + 1",
+        question: "teste2 é 3 + 1",
         opcoes: [
          { option: "4", correct: true },
          { option: "7", correct: false },
@@ -92,7 +92,7 @@ const question_2 = [
     },
 
     {
-        question: "Quanto é 2 + 2",
+        question: "teste2 é 2 + 2",
         opcoes: [
          { option: "4", correct: true },
          { option: "7", correct: false },
@@ -102,7 +102,7 @@ const question_2 = [
     },
 
     {
-        question: "Quanto é 3 + 3",
+        question: "teste2 é 3 + 3",
         opcoes: [
          { option: "6", correct: true },
          { option: "7", correct: false },
@@ -112,7 +112,7 @@ const question_2 = [
     },
 
     {
-        question: "Quanto é 4 + 4",
+        question: "teste2 é 4 + 4",
         opcoes: [
          { option: "8 ", correct: true },
          { option: "7", correct: false },
@@ -125,7 +125,7 @@ const question_2 = [
 
 const question_3 = [
     {
-        question: "quanto é 1 + 1",
+        question: "teste3 é 1 + 1",
         opcoes: [
         {option: "2", correct: true},
         {option: "1", correct: false},
@@ -134,7 +134,7 @@ const question_3 = [
         ]
     }, 
     {
-        question: "Quanto é 1 + 1",
+        question: "teste3 é 1 + 1",
         opcoes: [
          { option: "2", correct: true },
          { option: "7", correct: false },
@@ -144,7 +144,7 @@ const question_3 = [
     },
 
     {
-        question: "Quanto é 1 + 1",
+        question: "teste3 é 1 + 1",
         opcoes: [
          { option: "2", correct: true },
          { option: "7", correct: false },
@@ -154,7 +154,7 @@ const question_3 = [
     },
 
     {
-        question: "Quanto é 2 + 2",
+        question: "teste3 é 2 + 2",
         opcoes: [
          { option: "4", correct: true },
          { option: "7", correct: false },
@@ -164,7 +164,7 @@ const question_3 = [
     },
 
     {
-        question: "Quanto é 3 + 3",
+        question: "teste3",
         opcoes: [
          { option: "6", correct: true },
          { option: "7", correct: false },
@@ -174,7 +174,7 @@ const question_3 = [
     },
 
     {
-        question: "Quanto é 4 + 4",
+        question: "teste3 é 4 + 4",
         opcoes: [
          { option: "8 ", correct: true },
          { option: "7", correct: false },
