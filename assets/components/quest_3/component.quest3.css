@@ -1,7 +1,7 @@
 body {
     text-align: center;
     text-transform: uppercase;
-    background-color: #00ffff;
+    background-color: black;
     padding: 0;
     margin: 0;
     border: 0;
@@ -9,11 +9,16 @@ body {
 
 #pergunta {
     text-transform: capitalize;
+    color: white;
+    border: blue;
+}
+
+#result {
+    color: white;
 }
 
 #rest-opc {
     border: 2px solid #eeee; /* Define a largura e a cor da borda */
-    background-color: white;
+    background-color: purple;
     padding: 10px; /* Adiciona um espaçamento interno ao redor das perguntas */
 }
-
