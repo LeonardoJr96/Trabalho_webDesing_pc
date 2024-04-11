@@ -1,24 +1,79 @@
 body {
     text-align: center;
     text-transform: uppercase;
-    background-color: black;
     padding: 0;
     margin: 0;
-    border: 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../img/212822.gif);
+
+}
+
+@keyframes ascend {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 #pergunta {
-    text-transform: capitalize;
-    color: white;
-    border: blue;
+    color: #fff;
+    border: 1px solid white; /* Cor laranja */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #result {
-    color: white;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 
 #rest-opc {
-    border: 2px solid #eeee; /* Define a largura e a cor da borda */
-    background-color: purple;
-    padding: 10px; /* Adiciona um espaçamento interno ao redor das perguntas */
+    border: 2px solid white; /* Cor laranja */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background-color: black; /* Cor roxa mais escura */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: purple; /* Cor roxa mais escura */
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    color: #a8dadc;
+}
+
+#imagem-fundo {
+    width: 3%; 
+    margin-top: 24%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
 }

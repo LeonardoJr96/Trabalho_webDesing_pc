@@ -144,8 +144,8 @@ const question_3 = [
     {
         question: "Qual é o resultado de 5 + 3?",
         opcoes: [
-            {option: "7", correct: true},
-            {option: "8", correct: false},
+            {option: "8", correct: true},
+            {option: "7", correct: false},
             {option: "6", correct: false},
             {option: "9", correct: false}
         ]
