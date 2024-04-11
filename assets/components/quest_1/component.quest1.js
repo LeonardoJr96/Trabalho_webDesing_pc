@@ -6,19 +6,23 @@ document.addEventListener('DOMContentLoaded', function () {
     let erros = 0;
     let currentQuestionIndex = 0;
     let respostaClicada = false;
+    let timer;
 
     const result = document.getElementById('result')
     const selectResponse = document.getElementById('quiz');
     const pergunta = document.getElementById('pergunta');
     const reset = document.getElementById('reset');
-    const retorno = document.getElementById('retorno');
 
     function nextQuestion() {
         // Verifica se ainda há perguntas restantes
         if (currentQuestionIndex <= question_1.length - 1) {
             currentQuestionIndex++;
-        } else {
+        } else if (contagem == currentQuestionIndex) {
             alert('acertou todas');
+            exibirResultado()
+            return
+        } else {
+            exibirResultado()
             return;
         }
 
@@ -42,17 +46,11 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
 
         respostaClicada = false;
-
-        // Avança para a próxima pergunta após um pequeno atraso (por exemplo, 20 segundos)
-       setTimeout(() => {
-           if (!respostaClicada) {
-             nextQuestion();
-            }
-        }, 20000); // 20000 milissegundos = 20 segundos
     }
 
     window.responseAlternative = (alternativa) => {
         respostaClicada = true; // Define que uma resposta foi clicada
+        clearTimeout(timer)
         if (alternativa) {
             acertos++;
             console.log(acertos)
@@ -64,7 +62,18 @@ document.addEventListener('DOMContentLoaded', function () {
         contagem++;
 
         nextQuestion()
+        startTimer(); // Inicia um novo timer
     };
+
+    function startTimer() {
+    timer = setTimeout(() => {
+        if (!respostaClicada) {
+            contagem++;
+            nextQuestion();
+        }
+    }, 20000); // 20000 milissegundos = 20 segundos
+    };
+    
 
     function shuffleAnswersOpcoes(opcoes) {
         for (let i = opcoes.length - 1; i > 0; i--) {
@@ -88,16 +97,34 @@ document.addEventListener('DOMContentLoaded', function () {
         acertos = 0;
         erros = 0;
         currentQuestionIndex = 0;
+        contagem = 1;
         shuffleQuestions(); // Embaralha as perguntas novamente
-        nextQuestion();
+        nextQuestion(); // Inicia o quiz com a primeira pergunta
+        document.getElementById('resultado').style.display = 'none';
+        document.getElementById('quiz').style.display = 'block';
     }
+    
 
     // Embaralha as perguntas inicialmente
     shuffleQuestions();
     // Inicia o quiz com a primeira pergunta
     nextQuestion();
 
-    //retorno.addEventListener('click', function () {
-
-    //});
+    function exibirResultado() {
+        // Calcula a porcentagem de acertos
+        const porcentagemAcertos = (acertos / question_1.length) * 100;
+    
+        // Esconde o conteúdo do quiz
+        document.getElementById('quiz').style.display = 'none';
+    
+        // Exibe o resultado
+        result.innerHTML = `
+            <h2>Resultado do Quiz</h2>
+            <p>Você acertou ${acertos} de ${question_1.length} perguntas (${porcentagemAcertos.toFixed(2)}% de acerto).</p>
+        `;
+    
+        // Exibe o resultado
+        result.style.display = 'block';
+    }
+    
 });

@@ -1,3 +1,5 @@
+css gradiente verde com azul escuro:
+
 body {
     text-align: center;
     text-transform: uppercase;
@@ -5,7 +7,7 @@ body {
     margin: 0;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, blue, #170f5a, purple, #ad88ac, #ff00d4); /* Gradiente do roxo mais escuro ao laranja mais claro */
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     animation: ascend 20s ease infinite alternate;
     background-size: 300% 300%;
 }
@@ -22,7 +24,7 @@ body {
 #pergunta {
     text-transform: capitalize;
     color: #fff;
-    border: 1px solid white; /* Cor laranja */
+    border: 1px solid #4a90e2;
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -37,7 +39,7 @@ body {
 }
 
 #rest-opc {
-    border: 2px solid white; /* Cor laranja */
+    border: 2px solid #4a90e2;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 30px;
     margin-top: 30px;
@@ -46,8 +48,8 @@ body {
 }
 
 button {
-    background-color: transparent; /* Cor roxa mais escura */
-    color: white;
+    background-color: #4CAF50;
+    color: #fff;
     padding: 15px 30px;
     border: none;
     cursor: pointer;
@@ -58,8 +60,7 @@ button {
 }
 
 button:hover {
-    background-color: white;
-    color: purple; /* Cor roxa mais escura */
+    background-color: #45a049;
 }
 
 a {
