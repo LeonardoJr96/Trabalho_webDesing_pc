@@ -5,9 +5,8 @@ body {
     margin: 0;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, blue, #170f5a, purple, #ad88ac, #ff00d4); /* Gradiente do roxo mais escuro ao laranja mais claro */
-    animation: ascend 20s ease infinite alternate;
-    background-size: 300% 300%;
+    background-image: url(../img/212822.gif);
+
 }
 
 @keyframes ascend {
@@ -20,7 +19,6 @@ body {
 }
 
 #pergunta {
-    text-transform: capitalize;
     color: #fff;
     border: 1px solid white; /* Cor laranja */
     padding: 20px;
@@ -46,7 +44,7 @@ body {
 }
 
 button {
-    background-color: transparent; /* Cor roxa mais escura */
+    background-color: black; /* Cor roxa mais escura */
     color: white;
     padding: 15px 30px;
     border: none;
@@ -69,4 +67,13 @@ a {
 
 a:hover {
     color: #a8dadc;
+}
+
+#imagem-fundo {
+    width: 3%; 
+    margin-top: 24%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
 }
