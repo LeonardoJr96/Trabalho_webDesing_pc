@@ -2,11 +2,14 @@
   "name": "trabalho_webdesing_pc",
   "version": "1.0.0",
   "description": "Este é um aplicativo de quiz simples que permite aos usuários responder a uma série de perguntas de múltipla escolha.",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
