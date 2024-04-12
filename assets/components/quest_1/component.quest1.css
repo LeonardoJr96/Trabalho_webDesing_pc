@@ -20,7 +20,7 @@ body {
 
 #pergunta {
     color: #fff;
-    border: 1px solid white; /* Cor laranja */
+    border: 1px solid white;
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -35,7 +35,7 @@ body {
 }
 
 #rest-opc {
-    border: 2px solid white; /* Cor laranja */
+    border: 2px solid white;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 30px;
     margin-top: 30px;
@@ -44,7 +44,7 @@ body {
 }
 
 button {
-    background-color: black; /* Cor roxa mais escura */
+    background-color: black;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -57,7 +57,7 @@ button {
 
 button:hover {
     background-color: white;
-    color: purple; /* Cor roxa mais escura */
+    color: purple;
 }
 
 a {

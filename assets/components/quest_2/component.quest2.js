@@ -104,26 +104,17 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('quiz').style.display = 'block';
     }
     
-
-    // Embaralha as perguntas inicialmente
     shuffleQuestions();
-    // Inicia o quiz com a primeira pergunta
     nextQuestion();
 
     function exibirResultado() {
-        // Calcula a porcentagem de acertos
         const porcentagemAcertos = (acertos / question_2.length) * 100;
-    
-        // Esconde o conteúdo do quiz
         document.getElementById('quiz').style.display = 'none';
-    
-        // Exibe o resultado
         result.innerHTML = `
             <h2>Resultado do Quiz</h2>
             <p>Você acertou ${acertos} de ${question_2.length} perguntas (${porcentagemAcertos.toFixed(2)}% de acerto).</p>
         `;
-    
-        // Exibe o resultado
+
         result.style.display = 'block';
     }
     
