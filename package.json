@@ -1,16 +1,12 @@
 {
   "name": "trabalho_webdesing_pc",
   "version": "1.0.0",
-  "description": "",
-  "main": "",
+  "description": "Este é um aplicativo de quiz simples que permite aos usuários responder a uma série de perguntas de múltipla escolha.",
+  "main": "index.js",
   "scripts": {
-    "start": "question.js component.quest1.js component.quest2.js component.quest3.js",
-    "test": "nodemon --exec 'echo \"Error: no test specified\" && exit 1'"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-    "nodemon": "^3.1.0"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
