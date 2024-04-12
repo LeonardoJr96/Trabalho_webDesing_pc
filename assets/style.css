@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url(./components/img/230700872-d5f44b85-56c7-4e27-80a4-6e2db901e60c.gif);
+    background-image: url(./components/img/Chill\ Mario\ 2023\ ver_\,\ Pixel\ Jeff.gif);
     margin: 0;
     padding: 0;
     display: flex;
@@ -18,7 +18,9 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 30px;
+    text-shadow: 4px 4px 8px rgb(0, 0, 0);
 }
+
 
 a {
     text-decoration: none;
@@ -27,7 +29,7 @@ a {
 button {
     background-color: #ff6f61;
     color: #fff;
-    border: none;
+    border: 2px solid black; /* Adicionando borda preta */
     padding: 15px 30px;
     font-size: 18px;
     border-radius: 5px;
