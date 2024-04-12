@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (currentQuestionIndex <= question_2.length - 1) {
             currentQuestionIndex++;
         } else if (contagem == currentQuestionIndex) {
-            alert('acertou todas');
             exibirResultado()
             return
         } else {
@@ -56,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(acertos)
         } else {
             erros++;
-            alert('Resposta errada!' + erros);
             console.log(erros)
         }
         contagem++;
