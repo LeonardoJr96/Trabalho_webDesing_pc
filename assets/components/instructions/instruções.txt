@@ -1,9 +1,5 @@
 Documentar tudo o que for fazer para poder apresentar
 
-*Fazer o index.html
-*criar o CSS para as paginas
-*Formular as perguntas e respostas
-*Adicionar funcionalidades de voltar para o arquivo index.
 *adicionar seguintes funcionalidades:
     .retornar na questão anterior
     .colocar limitante nas questões

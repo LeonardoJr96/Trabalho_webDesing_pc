@@ -5,8 +5,9 @@ body {
     margin: 0;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(../img/212822.gif);
-
+    background-image: url(../img/The\ Wizard\ -Pixel\ Art\ -\ Social\ art\ Prize.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @keyframes ascend {

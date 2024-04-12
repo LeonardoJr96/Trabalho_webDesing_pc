@@ -5,7 +5,9 @@ body {
     margin: 0;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(../img/212822.gif);
+    background-image: url(../img/loading.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 

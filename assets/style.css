@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url(./components/img/Chill\ Mario\ 2023\ ver_\,\ Pixel\ Jeff.gif);
+    background-image: url(./components/img/mario.gif);
     margin: 0;
     padding: 0;
     display: flex;
@@ -29,7 +29,7 @@ a {
 button {
     background-color: #ff6f61;
     color: #fff;
-    border: 2px solid black; /* Adicionando borda preta */
+    border: 2px solid black;
     padding: 15px 30px;
     font-size: 18px;
     border-radius: 5px;
