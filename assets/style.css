@@ -1,12 +1,24 @@
+/* Estilos padrão para todos os dispositivos */
 body {
     font-family: 'Arial', sans-serif;
     background-color: black;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: 'Arial Black', sans-serif; /* Define uma fonte mais negrito para o título */
+    font-size: 36px; /* Define um tamanho maior para o título */
+    color: white; /* Define a cor do título */
+    text-align: center; /* Centraliza o texto */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    letter-spacing: 2px; /* Adiciona espaçamento entre as letras */
+    margin-bottom: 30px; /* Adiciona margem inferior para separar do conteúdo abaixo */
 }
 
 a {
@@ -31,4 +43,33 @@ button:hover {
 
 button:focus {
     outline: none;
+}
+
+/* Estilos para dispositivos móveis com largura até 320px */
+@media only screen and (max-width: 320px) {
+    body {
+        padding: 10px; /* Adiciona espaço de preenchimento menor para dispositivos móveis */
+    }
+
+    button {
+        padding: 10px 20px; /* Diminui o preenchimento dos botões */
+        font-size: 16px; /* Diminui o tamanho da fonte dos botões */
+    }
+}
+
+/* Estilos para dispositivos móveis com largura entre 321px e 600px */
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+    body {
+        padding: 20px; /* Adiciona espaço de preenchimento maior para dispositivos móveis */
+    }
+}
+
+/* Estilos para tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Você pode adicionar estilos específicos para tablets aqui */
+}
+
+/* Estilos para PCs */
+@media only screen and (min-width: 1025px) {
+    /* Você pode adicionar estilos específicos para PCs aqui */
 }
